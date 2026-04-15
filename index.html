@@ -31,7 +31,7 @@
             <a href="#booking" class="hover:text-teal-600 transition font-bold text-teal-800">Book Now</a>
             <a href="#admin" class="hover:text-teal-900 italic transition border-l pl-10 border-stone-200">Admin Feed</a>
         </div>
-        <a href="https://wa.me/237990015006" target="_blank" class="bg-teal-900 text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase hover:bg-teal-800 transition shadow-lg flex items-center gap-2">
+        <a href="https://wa.me/23799015006" target="_blank" class="bg-teal-900 text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase hover:bg-teal-800 transition shadow-lg flex items-center gap-2">
             <span class="w-2 h-2 bg-green-400 rounded-full animate-ping"></span> Live WhatsApp
         </a>
     </nav>
@@ -136,7 +136,7 @@
                         <span class="text-3xl">📞</span>
                         <div>
                             <p class="text-stone-400 mb-1 tracking-widest uppercase text-[10px]">WhatsApp Support</p>
-                            <p class="text-base tracking-normal normal-case font-semibold">+237 990 015 006</p>
+                            <p class="text-base tracking-normal normal-case font-semibold">+237 990 150 06</p>
                         </div>
                     </div>
                 </div>
@@ -144,15 +144,15 @@
             <div class="p-16 bg-white">
                 <form id="spaBookingForm" class="space-y-8">
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Full Name</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Customer Identity</label>
                         <input type="text" id="custName" placeholder="Enter Full Name" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Mobile Number</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Mobile Number</label>
                         <input type="tel" id="custPhone" placeholder="6XX XXX XXX" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Ritual Selection</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Ritual Selection</label>
                         <select id="serviceType" class="w-full p-5 rounded-[1.5rem] border border-stone-200 bg-white font-bold cursor-pointer">
                             <option value="25000">Massage (25,000 XAF)</option>
                             <option value="10000">Med-Pedicure (10,000 XAF)</option>
@@ -169,8 +169,8 @@
     </section>
 
     <section id="admin" class="py-24 px-8 bg-stone-950 text-white">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold tracking-tighter text-teal-400 uppercase italic mb-12">Lemac Management Feed</h2>
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold tracking-tighter text-teal-400 uppercase italic mb-12 font-black">Lemac Management Feed</h2>
             <div class="bg-stone-900 rounded-[2.5rem] overflow-hidden border border-stone-800 shadow-2xl admin-glow">
                 <table class="w-full text-left text-sm text-stone-300">
                     <thead>
@@ -182,7 +182,7 @@
                         </tr>
                     </thead>
                     <tbody id="adminTableBody">
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -218,7 +218,9 @@
             const name = document.getElementById('custName').value;
             const phone = document.getElementById('custPhone').value;
             const service = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
-            const businessNumber = "237990015006"; 
+            
+            // THE NEW CORRECTED BUSINESS NUMBER
+            const businessNumber = "23799015006"; 
 
             const message = `Hello Lemac Wellness! %0A%0AI want to book a session:%0A👤 Name: ${name}%0A💆‍♂️ Service: ${service}%0A📱 Contact: ${phone}`;
             window.open(`https://wa.me/${businessNumber}?text=${message}`, '_blank');
@@ -230,7 +232,7 @@
                     <td class="p-8 text-stone-500">${new Date().toLocaleTimeString()}</td>
                     <td class="p-8 font-bold text-white uppercase tracking-tighter">${name}</td>
                     <td class="p-8 text-teal-400 italic">${service}</td>
-                    <td class="p-8 text-right uppercase text-[10px] font-black text-teal-200 tracking-widest">Redirected</td>
+                    <td class="p-8 text-right uppercase text-[10px] font-black text-teal-200 tracking-widest underline decoration-teal-900">Redirected</td>
                 </tr>
             `;
             tbody.insertAdjacentHTML('afterbegin', row);
