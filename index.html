@@ -18,40 +18,43 @@
 <body class="bg-[#fdfcf8] text-gray-800">
 
     <nav class="flex justify-between items-center px-6 py-4 glass-nav border-b border-stone-100 sticky top-0 z-50">
-        <div class="text-xl font-bold text-teal-900 tracking-tighter">SEREIN WELLNESS</div>
+        <div class="text-xl font-bold text-teal-900 tracking-tighter uppercase">LEMAC WELLNESS</div>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#services" class="hover:text-teal-600">Services</a>
-            <a href="#gallery" class="hover:text-teal-600">Gallery</a>
-            <a href="#booking" class="hover:text-teal-600">Book Now</a>
-            <a href="#admin" class="text-stone-400 hover:text-teal-900">Admin Panel</a>
+            <a href="#services" class="hover:text-teal-600 transition">Services</a>
+            <a href="#gallery" class="hover:text-teal-600 transition">Gallery</a>
+            <a href="#booking" class="hover:text-teal-600 transition">Book Now</a>
+            <a href="#admin" class="text-stone-400 hover:text-teal-900 italic transition">Admin Panel</a>
         </div>
-        <a href="tel:+237600000000" class="bg-teal-900 text-white px-4 py-2 rounded text-xs font-bold uppercase">Contact Spa</a>
+        <a href="tel:+237600000000" class="bg-teal-900 text-white px-4 py-2 rounded text-xs font-bold uppercase hover:bg-teal-800 transition">Contact Us</a>
     </nav>
 
-    <header class="py-16 px-6 bg-teal-50">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <header class="relative py-16 px-6 bg-teal-50 overflow-hidden">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div>
-                <span class="text-teal-700 font-bold tracking-widest text-xs uppercase italic">Infrastructure built for Cameroonian Business</span>
-                <h1 class="text-5xl md:text-7xl mt-4 mb-6 text-teal-950 leading-tight">Wellness Redefined.</h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-md">Professional massages, luxury pedicures, and holistic rituals. Built for speed, security, and local scale.</p>
+                <span class="text-teal-700 font-bold tracking-widest text-xs uppercase italic">Built by Frank Fru for Lemac Wellness</span>
+                <h1 class="text-5xl md:text-7xl mt-4 mb-6 text-teal-950 leading-tight">Lemac Wellness <br>& Luxury Spa.</h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md">The pinnacle of Cameroonian relaxation. Professional massage therapy, medical pedicures, and holistic rituals in the heart of the city.</p>
                 <div class="flex gap-4">
-                    <a href="#booking" class="bg-teal-800 text-white px-8 py-4 rounded shadow-lg hover:bg-teal-700 transition">Book Session</a>
-                    <a href="#services" class="bg-white text-teal-900 border border-teal-100 px-8 py-4 rounded shadow-sm hover:bg-stone-50 transition">View Menu</a>
+                    <a href="#booking" class="bg-teal-800 text-white px-8 py-4 rounded shadow-lg hover:bg-teal-700 transition">Reserve Session</a>
+                    <a href="#gallery" class="bg-white text-teal-900 border border-teal-100 px-8 py-4 rounded shadow-sm hover:bg-stone-50 transition">View Sanctuary</a>
                 </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" class="rounded-2xl shadow-2xl" alt="Spa Massage">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" class="rounded-2xl shadow-2xl relative z-20" alt="Lemac Treatment">
+                <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+            </div>
         </div>
     </header>
 
     <section id="services" class="py-24 container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div class="max-w-xl">
-                <h2 class="text-4xl mb-4 text-teal-950">Signature Treatments</h2>
-                <p class="text-gray-500">Prices tailored for local and international guests.</p>
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="text-4xl mb-4 text-teal-950">Curated Treatments</h2>
+                <p class="text-gray-500">Premium wellness using local organic ingredients and world-class techniques.</p>
             </div>
             <div class="mt-6 md:mt-0 p-3 bg-stone-100 rounded-xl flex items-center gap-3">
-                <span class="text-[10px] font-black text-stone-500 uppercase">Currency:</span>
-                <select id="currencySelector" onchange="convertPrices()" class="bg-white border border-stone-200 text-xs p-2 rounded shadow-sm focus:ring-2 focus:ring-teal-500 outline-none">
+                <span class="text-[10px] font-black text-stone-500 uppercase">Currency Converter:</span>
+                <select id="currencySelector" onchange="convertPrices()" class="bg-white border border-stone-200 text-xs p-2 rounded shadow-sm focus:ring-2 focus:ring-teal-500 outline-none cursor-pointer">
                     <option value="XAF">CFA (XAF)</option>
                     <option value="EUR">Euro (€)</option>
                     <option value="USD">Dollar ($)</option>
@@ -60,22 +63,22 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition">
-                <div class="text-3xl mb-4">💆‍♀️</div>
-                <h3 class="text-2xl mb-2">Massages</h3>
-                <p class="text-sm text-gray-500 mb-6">Deep Tissue and Swedish aromatherapy rituals.</p>
+            <div class="bg-white p-8 border border-stone-100 rounded-3xl hover:shadow-2xl transition duration-300">
+                <span class="text-3xl">💆‍♀️</span>
+                <h3 class="text-2xl mt-4 mb-2">Massages</h3>
+                <p class="text-sm text-gray-500 mb-6 font-light">Deep tissue, Swedish, and local therapeutic oil rituals.</p>
                 <p class="font-bold text-teal-800 text-xl price-tag" data-base="25000">25,000 XAF</p>
             </div>
-            <div class="bg-white p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition">
-                <div class="text-3xl mb-4">💅</div>
-                <h3 class="text-2xl mb-2">Pedicures</h3>
-                <p class="text-sm text-gray-500 mb-6">Medical-grade hygiene with luxury finishes.</p>
+            <div class="bg-white p-8 border border-stone-100 rounded-3xl hover:shadow-2xl transition duration-300">
+                <span class="text-3xl">💅</span>
+                <h3 class="text-2xl mt-4 mb-2">Luxury Pedicures</h3>
+                <p class="text-sm text-gray-500 mb-6 font-light">Full medical hygiene with luxury aesthetic finishes.</p>
                 <p class="font-bold text-teal-800 text-xl price-tag" data-base="10000">10,000 XAF</p>
             </div>
-            <div class="bg-white p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition">
-                <div class="text-3xl mb-4">🧘‍♂️</div>
-                <h3 class="text-2xl mb-2">Body Wellness</h3>
-                <p class="text-sm text-gray-500 mb-6">Full body scrubs and volcanic clay wraps.</p>
+            <div class="bg-white p-8 border border-stone-100 rounded-3xl hover:shadow-2xl transition duration-300">
+                <span class="text-3xl">🧘‍♂️</span>
+                <h3 class="text-2xl mt-4 mb-2">Body Wellness</h3>
+                <p class="text-sm text-gray-500 mb-6 font-light">Full body scrubs and hydrating volcanic clay wraps.</p>
                 <p class="font-bold text-teal-800 text-xl price-tag" data-base="15000">15,000 XAF</p>
             </div>
         </div>
@@ -83,46 +86,50 @@
 
     <section id="gallery" class="py-16 px-6 bg-stone-50">
         <div class="container mx-auto">
-            <h2 class="text-3xl mb-10 text-center text-teal-950">Our Sanctuary</h2>
+            <h2 class="text-3xl mb-10 text-center text-teal-950 italic">The Lemac Sanctuary</h2>
             <div class="masonry">
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1591343395082-e120087024b4?auto=format&fit=crop&q=80&w=400" class="rounded-lg shadow hover:opacity-90 transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1591343395082-e120087024b4?auto=format&fit=crop&q=80&w=400" class="rounded-xl shadow-md hover:scale-[1.02] transition"></div>
             </div>
         </div>
     </section>
 
     <section id="booking" class="py-24 px-6 container mx-auto">
-        <div class="max-w-4xl mx-auto bg-white border border-stone-100 rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2">
+        <div class="max-w-4xl mx-auto bg-white border border-stone-100 rounded-[2rem] overflow-hidden shadow-2xl grid md:grid-cols-2">
             <div class="p-10 bg-teal-900 text-white">
-                <h2 class="text-4xl mb-6 font-bold">Book Today</h2>
-                <p class="text-teal-200 mb-8 font-light">Secure your spot with MTN MoMo or Orange Money.</p>
-                <div class="space-y-4 text-sm opacity-80">
+                <h2 class="text-4xl mb-6 font-bold leading-tight">Begin Your <br>Journey.</h2>
+                <p class="text-teal-200 mb-8 font-light text-sm">Secure your booking with a mobile deposit. We accept MTN MoMo and Orange Money for your convenience.</p>
+                <div class="space-y-4 text-xs tracking-wider uppercase opacity-70 font-bold">
                     <p>📍 Bastos, Yaoundé</p>
-                    <p>📧 spa@frankfru.com</p>
-                    <p>📞 +237 6XX XXX XXX</p>
+                    <p>📧 wellness@lemac.cm</p>
+                    <p>📞 +237 600 000 000</p>
                 </div>
             </div>
             <div class="p-10">
                 <form id="spaBookingForm" class="space-y-4">
-                    <input type="text" id="custName" placeholder="Name" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600" required>
-                    <input type="tel" id="custPhone" placeholder="Phone (6XX XXX XXX)" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600" required>
-                    <select id="serviceType" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600 bg-white">
+                    <input type="text" id="custName" placeholder="Full Name" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600 transition shadow-sm" required>
+                    <input type="tel" id="custPhone" placeholder="WhatsApp (6XX XXX XXX)" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600 transition shadow-sm" required>
+                    <select id="serviceType" class="w-full p-4 rounded-xl border border-stone-200 focus:outline-teal-600 bg-white transition shadow-sm">
                         <option value="25000">Massage (25,000 XAF)</option>
                         <option value="10000">Pedicure (10,000 XAF)</option>
                         <option value="15000">Wellness Scrub (15,000 XAF)</option>
                     </select>
-                    <div class="p-4 bg-stone-50 rounded-xl">
-                        <p class="text-[10px] font-bold uppercase mb-2 text-stone-400">Cameroon Gateway Integration</p>
-                        <div class="flex gap-4">
-                            <label class="flex items-center gap-2 text-sm"><input type="radio" name="pay" value="MTN" checked> MTN</label>
-                            <label class="flex items-center gap-2 text-sm"><input type="radio" name="pay" value="Orange"> Orange</label>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-100">
+                        <p class="text-[10px] font-black uppercase mb-3 text-stone-400 tracking-tighter">Cameroonian Payment Gateway</p>
+                        <div class="flex gap-6">
+                            <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer hover:text-teal-700">
+                                <input type="radio" name="payMethod" value="MTN" checked class="accent-teal-700"> MTN MoMo
+                            </label>
+                            <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer hover:text-teal-700">
+                                <input type="radio" name="payMethod" value="Orange" class="accent-orange-600"> Orange Money
+                            </label>
                         </div>
                     </div>
-                    <button type="submit" class="w-full bg-teal-900 text-white font-bold py-4 rounded-xl hover:bg-teal-800 transition">Complete Booking</button>
+                    <button type="submit" class="w-full bg-teal-900 text-white font-bold py-5 rounded-xl hover:bg-teal-800 transition-all duration-300 shadow-xl transform hover:-translate-y-1">Confirm Lemac Booking</button>
                 </form>
             </div>
         </div>
@@ -130,42 +137,46 @@
 
     <section id="admin" class="py-16 px-6 bg-stone-900 text-white">
         <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold italic text-teal-400 underline decoration-teal-600">Admin: Live Booking Logs</h2>
-                <button onclick="loadAdminDashboard()" class="text-[10px] uppercase tracking-widest bg-stone-800 px-4 py-2 rounded hover:bg-stone-700">Refresh Feed</button>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tighter text-teal-400">Lemac Manager Panel</h2>
+                    <p class="text-stone-400 text-sm">Secure infrastructure for tracking spa growth.</p>
+                </div>
+                <button onclick="loadAdminDashboard()" class="text-[10px] uppercase tracking-[0.2em] font-black bg-teal-800 hover:bg-teal-700 px-6 py-3 rounded-full transition shadow-lg">Refresh Live Data</button>
             </div>
-            <div class="bg-stone-800 rounded-xl overflow-x-auto border border-stone-700">
+            <div class="bg-stone-800 rounded-2xl overflow-x-auto border border-stone-700 shadow-2xl">
                 <table class="w-full text-left text-sm">
-                    <thead class="bg-stone-700 text-stone-300 uppercase text-[10px] tracking-widest font-black">
-                        <tr>
-                            <th class="p-4">Timestamp</th>
-                            <th class="p-4">Customer</th>
-                            <th class="p-4">Contact</th>
-                            <th class="p-4">Treatment</th>
-                            <th class="p-4">Status</th>
+                    <thead>
+                        <tr class="border-b border-stone-700 uppercase text-stone-500 text-[10px] tracking-widest font-black">
+                            <th class="p-5">Booking Date</th>
+                            <th class="p-5">Customer Name</th>
+                            <th class="p-5">Contact (WhatsApp)</th>
+                            <th class="p-5">Service Selected</th>
+                            <th class="p-5">Payment Status</th>
                         </tr>
                     </thead>
-                    <tbody id="adminTableBody"></tbody>
+                    <tbody id="adminTableBody">
+                        </tbody>
                 </table>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 px-6 text-center text-stone-400 border-t border-stone-100">
-        <div class="flex justify-center space-x-6 mb-4 font-medium text-xs">
-            <a href="https://frankfru.com" target="_blank" class="hover:text-teal-900 transition">frankfru.com</a>
-            <a href="https://github.com/chifru19" target="_blank" class="hover:text-teal-900 transition">GitHub/chifru19</a>
-            <a href="https://linkedin.com" target="_blank" class="hover:text-teal-900 text-blue-600 transition">LinkedIn</a>
+    <footer class="py-16 px-6 text-center text-stone-400 border-t border-stone-100">
+        <div class="flex justify-center space-x-8 mb-6 font-bold text-xs tracking-widest">
+            <a href="https://frankfru.com" class="hover:text-teal-900 transition underline decoration-teal-200">frankfru.com</a>
+            <a href="https://github.com/chifru19" class="hover:text-teal-900 transition underline decoration-teal-200">GitHub/chifru19</a>
+            <a href="https://linkedin.com" class="hover:text-teal-900 text-blue-500 transition underline decoration-blue-200">LinkedIn</a>
         </div>
-        <p class="text-[10px] uppercase tracking-widest font-bold">© 2026 Designed & Engineered by Frank Fru | Cameroon</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] font-black text-stone-300">© 2026 LEMAC WELLNESS SPA CAMEROON | ENGINEERED BY FRANK FRU</p>
     </footer>
 
     <script>
-        // --- Currency Converter Logic ---
+        // --- Dynamic Currency Logic ---
         function convertPrices() {
             const currency = document.getElementById('currencySelector').value;
             const prices = document.querySelectorAll('.price-tag');
-            const rates = { XAF: 1, EUR: 0.0015, USD: 0.0017 };
+            const rates = { XAF: 1, EUR: 0.00152, USD: 0.00168 };
             const symbols = { XAF: 'XAF', EUR: '€', USD: '$' };
 
             prices.forEach(el => {
@@ -177,7 +188,7 @@
             });
         }
 
-        // --- Booking Form Logic ---
+        // --- Live Booking Logic ---
         document.getElementById('spaBookingForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const data = {
@@ -186,6 +197,7 @@
                 service: document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text,
                 amount: document.getElementById('serviceType').value
             };
+
             try {
                 const response = await fetch('/api/book', {
                     method: 'POST',
@@ -193,29 +205,35 @@
                     body: JSON.stringify(data)
                 });
                 if (response.ok) {
-                    alert("Confirmed! WhatsApp Notification Sent.");
+                    alert("Booking Successful! A WhatsApp notification has been triggered for Lemac Staff.");
                     loadAdminDashboard();
                     e.target.reset();
                 }
-            } catch (err) { alert("Server Error. Check terminal for Node status."); }
+            } catch (err) {
+                console.error("Booking Error:", err);
+                alert("Server Connection Error. Please verify Node.js status.");
+            }
         });
 
-        // --- Dashboard Logic ---
+        // --- Admin Data Logic ---
         async function loadAdminDashboard() {
             try {
                 const res = await fetch('/api/admin/bookings');
                 const bookings = await res.json();
                 const tbody = document.getElementById('adminTableBody');
+                
                 tbody.innerHTML = bookings.length ? bookings.map(b => `
-                    <tr class="border-b border-stone-700">
-                        <td class="p-4">${new Date(b.date).toLocaleDateString()}</td>
-                        <td class="p-4 font-bold text-stone-200">${b.name}</td>
-                        <td class="p-4">${b.phone}</td>
-                        <td class="p-4 text-teal-400">${b.service}</td>
-                        <td class="p-4"><span class="bg-teal-900 text-teal-100 px-2 py-1 rounded text-[10px]">VERIFIED</span></td>
+                    <tr class="border-b border-stone-700 hover:bg-stone-750 transition">
+                        <td class="p-5 text-stone-300">${new Date(b.date).toLocaleDateString()}</td>
+                        <td class="p-5 font-bold text-white">${b.name}</td>
+                        <td class="p-5 text-teal-400">${b.phone}</td>
+                        <td class="p-5 italic text-stone-400">${b.service}</td>
+                        <td class="p-5"><span class="bg-teal-900 text-teal-200 px-3 py-1 rounded-full text-[10px] font-black border border-teal-700">VERIFIED</span></td>
                     </tr>
-                `).join('') : `<tr><td colspan="5" class="p-8 text-center text-stone-500 italic">No bookings found in database.</td></tr>`;
-            } catch (err) { console.warn("Waiting for server..."); }
+                `).join('') : `<tr><td colspan="5" class="p-10 text-center text-stone-600 font-bold uppercase tracking-widest italic">Waiting for incoming bookings...</td></tr>`;
+            } catch (err) {
+                console.warn("Server not reached. Data will load once Node.js is active.");
+            }
         }
         window.onload = loadAdminDashboard;
     </script>
