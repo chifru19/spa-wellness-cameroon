@@ -19,6 +19,7 @@
         .service-row-btn.active { background: #134e4a !important; color: white !important; border-color: #134e4a; }
         .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
         .gallery-frame:hover { transform: scale(1.03); }
+        .tech-badge { font-weight: 900; font-size: 10px; letter-spacing: 0.5em; color: #94a3b8; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 99px; }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
@@ -27,11 +28,27 @@
         <div class="text-2xl lg:text-4xl font-bold text-teal-950 italic uppercase tracking-tighter">LEMAC WELLNESS</div>
         <div class="hidden lg:flex space-x-12 text-[10px] font-bold uppercase tracking-widest text-stone-400">
             <a href="#services">Catalogue</a>
-            <a href="#booking">Your Corb</a>
             <a href="#gallery">Studio</a>
+            <a href="#booking">Your Corb</a>
         </div>
         <a href="https://wa.me/237676260909" target="_blank" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow-xl hover:bg-teal-800 transition">Concierge</a>
     </nav>
+
+    <header class="relative py-32 lg:py-64 px-10 lg:px-20 hero-gradient border-b border-stone-100">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-20 lg:gap-40 items-center">
+            <div class="hero-content">
+                <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
+                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter">Bilingual <br>Sanctuary.</h1>
+                <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala.<br><span class="text-stone-400 not-italic text-xl lg:text-2xl block mt-8">Engineering a sanctuary for high-performance restoration.</span></p>
+                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl">Consult the Menu</a>
+            </div>
+            <div class="hero-visual hidden lg:block">
+                <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
+                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Wellness Interior">
+                </div>
+            </div>
+        </div>
+    </header>
 
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20">
         <div class="text-center mb-24">
@@ -39,21 +56,21 @@
             <p class="text-stone-400 uppercase tracking-[0.5em] text-xs font-black">Select individual services to add to your corb</p>
         </div>
         <div class="grid md:grid-cols-3 gap-10">
-            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm">
+            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
                 <img src="images/massage.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Massage">
                 <h3 class="text-3xl mb-8 italic">💆‍♀️ Massages</h3>
                 <button onclick="toggleCartItem('Lemac Signature', 25000, this)" class="service-row-btn"><span>Lemac Signature</span> <span>25.000</span></button>
                 <button onclick="toggleCartItem('Therapeutic Massage', 15000, this)" class="service-row-btn"><span>Therapeutic</span> <span>15.000</span></button>
                 <button onclick="toggleCartItem('Hot Stone Massage', 20000, this)" class="service-row-btn"><span>Hot Stone</span> <span>20.000</span></button>
             </div>
-            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm">
+            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
                 <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial">
                 <h3 class="text-3xl mb-8 italic">✨ Skincare</h3>
                 <button onclick="toggleCartItem('Deep Facial', 20000, this)" class="service-row-btn"><span>Deep Facial</span> <span>20.000</span></button>
                 <button onclick="toggleCartItem('Body Scrub', 15000, this)" class="service-row-btn"><span>Body Scrub</span> <span>15.000</span></button>
                 <button onclick="toggleCartItem('Face Glow', 10000, this)" class="service-row-btn"><span>Face Glow</span> <span>10.000</span></button>
             </div>
-            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm">
+            <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
                 <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo">
                 <h3 class="text-3xl mb-8 italic">⏳ Lipocavitation</h3>
                 <button onclick="toggleCartItem('Lipocavitation Session', 30000, this)" class="service-row-btn"><span>Full Treatment</span> <span>30.000</span></button>
@@ -66,7 +83,7 @@
             <h2 class="text-6xl italic mb-16">Your Selection</h2>
             <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
                 <div id="cart-list" class="text-left mb-10 space-y-4">
-                    <p class="text-stone-500 italic text-center">Your corb is empty. Click services above to select.</p>
+                    <p class="text-stone-500 italic text-center">Your corb is empty. Click prices above to select.</p>
                 </div>
                 <div class="border-t border-stone-800 pt-10">
                     <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
@@ -90,10 +107,20 @@
                 <div class="gallery-frame"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
                 <div class="gallery-frame"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
                 <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 07</div>
-                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 08</div>
-                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 09</div>
+                <div class="gallery-frame"><img src="images/image_a07ac7.png" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame bg-stone-200 flex items-center justify-center italic text-stone-400">Treatment Room</div>
+                <div class="gallery-frame bg-stone-200 flex items-center justify-center italic text-stone-400">Studio Interior</div>
             </div>
+        </div>
+    </section>
+
+    <section id="admin" class="py-32 lg:py-64 px-10 lg:px-20 bg-stone-950 text-white text-center">
+        <h2 class="text-4xl lg:text-6xl font-bold italic mb-16 text-teal-500 uppercase">Engineering Systems</h2>
+        <div class="bg-stone-900 p-10 lg:p-20 rounded-[3rem] lg:rounded-[5rem] border border-stone-800 shadow-2xl max-w-5xl mx-auto font-mono text-[10px] lg:text-[11px] text-left uppercase tracking-widest leading-loose">
+            <p class="text-teal-400 mb-6 font-black">SYSTEM_LOG_INITIALIZED: Node Douala_Main_01 Active</p>
+            <p class="text-stone-500 mb-2">Lead Systems Architect: Frank Fru</p>
+            <p class="text-stone-500 mb-2">Technical Repository: chifru19/spa-wellness-cameroon</p>
+            <p class="text-stone-500">Security: AES-256 Cloudflare Edge Encryption Enabled</p>
         </div>
     </section>
 
@@ -112,8 +139,9 @@
                 <p class="text-teal-700 font-bold mt-4 text-xl">+(237) 676260909</p>
             </div>
             <div class="lg:text-right text-center">
-                <p class="text-stone-300 text-[10px] tracking-widest uppercase italic">
-                    © 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU
+                <p class="text-stone-300 text-[10px] tracking-widest uppercase italic leading-loose">
+                    © 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU<br>
+                    <a href="https://frankfru.com" class="hover:text-teal-600 transition">frankfru.com</a>
                 </p>
             </div>
         </div>
@@ -123,13 +151,8 @@
         let cart = [];
         function toggleCartItem(name, price, button) {
             const index = cart.findIndex(item => item.name === name);
-            if (index > -1) {
-                cart.splice(index, 1);
-                button.classList.remove('active');
-            } else {
-                cart.push({ name, price });
-                button.classList.add('active');
-            }
+            if (index > -1) { cart.splice(index, 1); button.classList.remove('active'); }
+            else { cart.push({ name, price }); button.classList.add('active'); }
             updateCartDisplay();
         }
         function updateCartDisplay() {
@@ -137,25 +160,17 @@
             const cfaTotal = document.getElementById('total-cfa');
             const eurTotal = document.getElementById('total-eur');
             const usdTotal = document.getElementById('total-usd');
-            if (cart.length === 0) {
-                list.innerHTML = `<p class="text-stone-500 italic text-center">Your corb is empty. Click services above to select.</p>`;
-            } else {
-                list.innerHTML = cart.map(item => `
-                    <div class="flex justify-between border-b border-stone-800 pb-2">
-                        <span>${item.name}</span>
-                        <span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span>
-                    </div>`).join('');
-            }
+            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Your corb is empty. Click prices above to select.</p>`; }
+            else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-800 pb-2"><span>${item.name}</span><span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
             const total = cart.reduce((sum, item) => sum + item.price, 0);
             cfaTotal.innerText = total.toLocaleString() + " CFA";
             eurTotal.innerText = (total / 655.95).toFixed(2);
             usdTotal.innerText = (total / 610).toFixed(2);
         }
         function sendToWhatsApp() {
-            if (cart.length === 0) { alert("Please select at least one service."); return; }
+            if (cart.length === 0) { alert("Select a service."); return; }
             const items = cart.map(i => i.name).join(', ');
-            const total = document.getElementById('total-cfa').innerText;
-            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${total}. Location: Bonamousadi.`;
+            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${document.getElementById('total-cfa').innerText}.`;
             window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
