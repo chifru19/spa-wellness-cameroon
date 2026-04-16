@@ -43,7 +43,7 @@
             </div>
             <div class="hero-visual hidden lg:block">
                 <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Lemac Spa Interior">
+                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Interior">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20">
         <div class="text-center mb-24">
             <h2 class="text-7xl lg:text-[8.5rem] text-teal-950 font-bold mb-12 italic tracking-tighter uppercase">Catalogue</h2>
-            <p class="text-stone-400 uppercase tracking-[0.5em] text-xs font-black">Click individual services to add to your corb</p>
+            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Click individual services to add to your corb</p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-10">
@@ -82,10 +82,10 @@
 
     <section id="booking" class="py-32 bg-teal-950 text-white px-10">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-6xl italic mb-16">Your Corb Selection</h2>
+            <h2 class="text-6xl italic mb-16 italic">Your Corb Selection</h2>
             <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
                 <div id="cart-list" class="text-left mb-10 space-y-4">
-                    <p class="text-stone-500 italic text-center">Click services above to add them to your corb.</p>
+                    <p class="text-stone-500 italic text-center">Click services above to select.</p>
                 </div>
                 <div class="border-t border-stone-800 pt-10">
                     <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
@@ -147,7 +147,7 @@
         function updateCartDisplay() {
             const list = document.getElementById('cart-list');
             const total = cart.reduce((sum, item) => sum + item.price, 0);
-            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Click services above to add them to your corb.</p>`; }
+            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Click services above to select.</p>`; }
             else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-800 pb-2"><span>${item.name}</span><span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
             document.getElementById('total-cfa').innerText = total.toLocaleString() + " CFA";
             document.getElementById('total-eur').innerText = (total / 655.95).toFixed(2);
@@ -157,7 +157,7 @@
             if (cart.length === 0) { alert("Select a service."); return; }
             const items = cart.map(i => i.name).join(', ');
             const message = `Hello Lemac Wellness, I would like to book: ${items}. Total: ${document.getElementById('total-cfa').innerText}.`;
-            window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, elevation: '_blank');
         }
     </script>
 </body>
