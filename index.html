@@ -43,7 +43,7 @@
             </div>
             <div class="hero-visual hidden lg:block">
                 <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Interior">
+                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Lemac Spa Interior">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20">
         <div class="text-center mb-24">
             <h2 class="text-7xl lg:text-[8.5rem] text-teal-950 font-bold mb-12 italic tracking-tighter uppercase">Catalogue</h2>
-            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Click individual services to add to your corb</p>
+            <p class="text-stone-400 uppercase tracking-[0.5em] text-xs font-black">Click individual services to add to your corb</p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-10">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
-                <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial">
+                <img src="images/body scrub.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Body Scrub">
                 <h3 class="text-3xl mb-8 italic">✨ Skincare</h3>
                 <button onclick="toggleCartItem('Deep Facial', 20000, this)" class="service-row-btn"><span>Deep Facial</span> <span>20.000</span></button>
                 <button onclick="toggleCartItem('Body scrub', 15000, this)" class="service-row-btn"><span>Body Scrub</span> <span>15.000</span></button>
@@ -80,23 +80,21 @@
         </div>
     </section>
 
-    <section id="booking" class="py-32 bg-teal-950 text-white px-10">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-6xl italic mb-16 italic">Your Corb Selection</h2>
-            <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
-                <div id="cart-list" class="text-left mb-10 space-y-4">
-                    <p class="text-stone-500 italic text-center">Click services above to select.</p>
-                </div>
-                <div class="border-t border-stone-800 pt-10">
-                    <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
-                    <div class="flex gap-10 text-xl font-light text-stone-400 justify-center">
-                        <p>€ <span id="total-eur">0.00</span></p>
-                        <p>$ <span id="total-usd">0.00</span></p>
-                    </div>
+    <section id="booking" class="py-32 bg-teal-950 text-white px-10 text-center">
+        <h2 class="text-6xl italic mb-16 italic">Your Selection</h2>
+        <div class="max-w-4xl mx-auto bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
+            <div id="cart-list" class="text-left mb-10 space-y-4">
+                <p class="text-stone-500 italic text-center">Click services above to select.</p>
+            </div>
+            <div class="border-t border-stone-800 pt-10">
+                <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
+                <div class="flex gap-10 text-xl font-light text-stone-400 justify-center">
+                    <p>€ <span id="total-eur">0.00</span></p>
+                    <p>$ <span id="total-usd">0.00</span></p>
                 </div>
             </div>
-            <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm Reservation</button>
         </div>
+        <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm Reservation</button>
     </section>
 
     <section id="gallery" class="py-32 lg:py-64 bg-stone-50">
@@ -124,7 +122,7 @@
             </div>
             <div class="text-center">
                 <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Enterprise Location</h4>
-                <p class="text-stone-600 italic leading-relaxed">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
+                <p class="text-stone-600 italic">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
                 <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260909</p>
             </div>
             <div class="lg:text-right text-center">
@@ -157,7 +155,7 @@
             if (cart.length === 0) { alert("Select a service."); return; }
             const items = cart.map(i => i.name).join(', ');
             const message = `Hello Lemac Wellness, I would like to book: ${items}. Total: ${document.getElementById('total-cfa').innerText}.`;
-            window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, elevation: '_blank');
+            window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
 </body>
