@@ -16,7 +16,7 @@
         .card-hover:hover { transform: translateY(-10px); border-color: #134e4a; box-shadow: 0 20px 40px rgba(19, 78, 74, 0.1); }
         .service-row-btn { display: flex; justify-content: space-between; width: 100%; padding: 12px 16px; margin-bottom: 8px; border-radius: 12px; border: 1px solid #f3f4f6; transition: 0.3s; font-size: 0.9rem; background: white; text-align: left; }
         .service-row-btn.active { background: #134e4a !important; color: white !important; border-color: #134e4a; box-shadow: 0 10px 15px rgba(19, 78, 74, 0.2); }
-        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
+        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; border: 1px solid #f1f5f9; }
         .gallery-frame:hover { transform: scale(1.03); }
         .tech-badge { font-weight: 900; font-size: 10px; letter-spacing: 0.5em; color: #94a3b8; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 99px; }
     </style>
@@ -63,7 +63,7 @@
                 <h3 class="text-3xl mb-8 italic">💆‍♀️ Massages</h3>
                 <button onclick="toggleCartItem('Lemac Signature', 25000, this)" class="service-row-btn"><span>Lemac Signature</span> <span>25.000</span></button>
                 <button onclick="toggleCartItem('Therapeutic Massage', 15000, this)" class="service-row-btn"><span>Therapeutic</span> <span>15.000</span></button>
-                <button onclick="toggleCartItem('Deep Tissue Massage', 20000, this)" class="service-row-btn"><span>Deep Tissue</span> <span>20.000</span></button>
+                <button onclick="toggleCartItem('Deep Tissue', 20000, this)" class="service-row-btn"><span>Deep Tissue</span> <span>20.000</span></button>
             </div>
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
                 <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial Skincare">
@@ -76,6 +76,8 @@
                 <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo Body Contouring">
                 <h3 class="text-3xl mb-8 italic">⏳ Lipocavitation</h3>
                 <button onclick="toggleCartItem('Full Treatment Session', 30000, this)" class="service-row-btn"><span>Full Session</span> <span>30.000</span></button>
+                <button onclick="toggleCartItem('Men Pedicure', 10000, this)" class="service-row-btn"><span>Men Pedicure</span> <span>10.000</span></button>
+                <button onclick="toggleCartItem('Lash Extensions', 15000, this)" class="service-row-btn"><span>Lash Extensions</span> <span>15.000</span></button>
             </div>
         </div>
     </section>
@@ -99,14 +101,65 @@
 
     <section id="gallery" class="py-32 lg:py-64 bg-stone-50">
         <div class="container mx-auto px-10 lg:px-20 text-center">
-            <h2 class="text-6xl lg:text-[8rem] text-teal-950 font-bold mb-32 italic uppercase tracking-tighter">Studio Visuals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="gallery-frame"><img src="images/facial.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/manicure.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/body scrub .jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover"></div>
+            <h2 class="text-6xl lg:text-8xl text-teal-950 font-bold mb-8 italic uppercase tracking-tighter">Studio Visuals</h2>
+            <p class="text-stone-400 uppercase tracking-[0.4em] text-[10px] font-black mb-32">A Glimpse into our Sanctuary</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="gallery-frame relative group">
+                    <img src="images/room-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Massage Room 1">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Massage Suite I</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/room-2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Massage Room 2">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Massage Suite II</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/men-pedicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Men Pedicure Activity">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Men Pedicure</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/lashes.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Lash Extension Activity">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Lash Extensions</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/facial.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Facial Skincare">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Skincare</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/manicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Manicure Activity">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Manicure</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/lipocavitation.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Body Contouring">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Contouring</span>
+                    </div>
+                </div>
+
+                <div class="gallery-frame relative group">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cicil Fru - Owner">
+                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Lead Specialist</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
