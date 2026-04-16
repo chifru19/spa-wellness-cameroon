@@ -27,7 +27,6 @@
         <a href="#" class="flex items-center">
             <img src="images/image_ae3812.jpg" class="h-16 lg:h-20 w-auto" alt="Lemac Wellness Official Logo">
         </a>
-        
         <div class="hidden lg:flex space-x-12 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400">
             <a href="#services" class="hover:text-teal-950">Catalogue</a>
             <a href="#booking" class="hover:text-teal-950">Your Corb</a>
@@ -40,9 +39,9 @@
         <div class="container mx-auto grid lg:grid-cols-2 gap-20 lg:gap-40 items-center">
             <div class="hero-content">
                 <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
-                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter leading-none">Lemac <br> Wellness</h1>
+                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter">Lemac <br> Wellness</h1>
                 <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala.</p>
-                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl">Consult the Menu</a>
+                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] shadow-2xl">Consult Menu</a>
             </div>
             <div class="hero-visual hidden lg:block">
                 <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
@@ -55,7 +54,7 @@
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20 border-b border-stone-100">
         <div class="text-center mb-24">
             <h2 class="text-7xl lg:text-[8.5rem] text-teal-950 font-bold mb-12 italic tracking-tighter uppercase">Catalogue</h2>
-            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Click individual treatments to add them to your corb</p>
+            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Select treatments for your digital Corb</p>
         </div>
         <div class="grid md:grid-cols-3 gap-10">
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
@@ -73,9 +72,9 @@
                 <button onclick="toggleCartItem('Body Scrub', 15000, this)" class="service-row-btn"><span>Body Scrub</span> <span>15.000</span></button>
             </div>
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
-                <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo Body Contouring">
-                <h3 class="text-3xl mb-8 italic">⏳ Lipocavitation</h3>
-                <button onclick="toggleCartItem('Full Treatment Session', 30000, this)" class="service-row-btn"><span>Full Session</span> <span>30.000</span></button>
+                <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Grooming & Body">
+                <h3 class="text-3xl mb-8 italic">⏳ Specialists</h3>
+                <button onclick="toggleCartItem('Full Lipo Session', 30000, this)" class="service-row-btn"><span>Full Lipo</span> <span>30.000</span></button>
                 <button onclick="toggleCartItem('Men Pedicure', 10000, this)" class="service-row-btn"><span>Men Pedicure</span> <span>10.000</span></button>
                 <button onclick="toggleCartItem('Lash Extensions', 15000, this)" class="service-row-btn"><span>Lash Extensions</span> <span>15.000</span></button>
             </div>
@@ -83,10 +82,10 @@
     </section>
 
     <section id="booking" class="py-32 bg-teal-950 text-white px-10 text-center">
-        <h2 class="text-6xl italic mb-16 italic">Selection Status</h2>
+        <h2 class="text-6xl italic mb-16">Selection Status</h2>
         <div class="max-w-4xl mx-auto bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
             <div id="cart-list" class="text-left mb-10 space-y-4">
-                <p class="text-stone-500 italic text-center">Please select your desired services from the catalogue above.</p>
+                <p class="text-stone-500 italic text-center">Your selection is currently empty.</p>
             </div>
             <div class="border-t border-stone-800 pt-10">
                 <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
@@ -96,70 +95,22 @@
                 </div>
             </div>
         </div>
-        <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm Reservation</button>
+        <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm via WhatsApp</button>
     </section>
 
     <section id="gallery" class="py-32 lg:py-64 bg-stone-50">
         <div class="container mx-auto px-10 lg:px-20 text-center">
             <h2 class="text-6xl lg:text-8xl text-teal-950 font-bold mb-8 italic uppercase tracking-tighter">Studio Visuals</h2>
-            <p class="text-stone-400 uppercase tracking-[0.4em] text-[10px] font-black mb-32">A Glimpse into our Sanctuary</p>
-            
+            <p class="text-stone-400 uppercase tracking-[0.4em] text-[10px] font-black mb-32">Experience the Lemac Sanctuary</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="gallery-frame relative group">
-                    <img src="images/room-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Massage Room 1">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Massage Suite I</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/room-2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Massage Room 2">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Massage Suite II</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/men-pedicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Men Pedicure Activity">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Men Pedicure</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/lashes.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Lash Extension Activity">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Lash Extensions</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/facial.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Facial Skincare">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Skincare</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/manicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Manicure Activity">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Manicure</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/lipocavitation.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Body Contouring">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Contouring</span>
-                    </div>
-                </div>
-
-                <div class="gallery-frame relative group">
-                    <img src="images/owner.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cicil Fru - Owner">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Lead Specialist</span>
-                    </div>
-                </div>
+                <div class="gallery-frame"><img src="images/room-1.jpg" class="w-full h-full object-cover" alt="Massage Room I"></div>
+                <div class="gallery-frame"><img src="images/room-2.jpg" class="w-full h-full object-cover" alt="Massage Room II"></div>
+                <div class="gallery-frame"><img src="images/men-pedicure.jpg" class="w-full h-full object-cover" alt="Men Pedicure"></div>
+                <div class="gallery-frame"><img src="images/lashes.jpg" class="w-full h-full object-cover" alt="Lash Extensions"></div>
+                <div class="gallery-frame"><img src="images/facial.jpg" class="w-full h-full object-cover" alt="Facial"></div>
+                <div class="gallery-frame"><img src="images/manicure.jpg" class="w-full h-full object-cover" alt="Manicure"></div>
+                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover" alt="Body Scrub"></div>
+                <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover" alt="Lead Specialist"></div>
             </div>
         </div>
     </section>
@@ -168,20 +119,20 @@
         <div class="container mx-auto grid lg:grid-cols-3 gap-20 items-center">
             <div class="flex flex-col items-center lg:items-start">
                 <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl mb-8">
-                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Cicil Fru - Owner">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Cicil Fru">
                 </div>
                 <h4 class="font-black uppercase tracking-widest text-sm text-teal-950">Cicil Fru</h4>
                 <p class="text-stone-400 text-[10px] uppercase tracking-widest mt-2">Owner & Lead Specialist</p>
             </div>
             <div class="text-center">
-                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Enterprise Location</h4>
-                <p class="text-stone-600 italic leading-relaxed">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
+                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Location</h4>
+                <p class="text-stone-600 italic leading-relaxed">Carefour lycée bonamousadi, Douala</p>
                 <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260909</p>
             </div>
             <div class="lg:text-right text-center">
                 <p class="text-stone-300 text-[10px] tracking-widest uppercase italic leading-loose">
                     © 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU<br>
-                    <a href="https://frankfru.com" class="hover:text-teal-600 transition underline">frankfru.com</a>
+                    <a href="https://frankfru.com" class="hover:text-teal-600 underline">frankfru.com</a>
                 </p>
             </div>
         </div>
@@ -198,16 +149,16 @@
         function updateCartDisplay() {
             const list = document.getElementById('cart-list');
             const total = cart.reduce((sum, item) => sum + item.price, 0);
-            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Please select your desired services from the catalogue above.</p>`; }
+            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Your selection is currently empty.</p>`; }
             else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-800 pb-2"><span>${item.name}</span><span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
             document.getElementById('total-cfa').innerText = total.toLocaleString() + " CFA";
             document.getElementById('total-eur').innerText = (total / 655.95).toFixed(2);
             document.getElementById('total-usd').innerText = (total / 610).toFixed(2);
         }
         function sendToWhatsApp() {
-            if (cart.length === 0) { alert("Please select at least one treatment."); return; }
+            if (cart.length === 0) { alert("Please select a treatment first."); return; }
             const items = cart.map(i => i.name).join(', ');
-            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${document.getElementById('total-cfa').innerText}. Location: Douala Sanctuary.`;
+            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${document.getElementById('total-cfa').innerText}.`;
             window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
